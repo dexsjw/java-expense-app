@@ -9,6 +9,7 @@ public class ExpenseApp {
         do {
             String userInput = showMenu();
             int option = checkUserInputForInt(userInput);
+            // int option = checkUserInput(userInput);
             
             switch (option) {
                 case 1:{
@@ -55,6 +56,21 @@ public class ExpenseApp {
         System.out.println("6. Exit");
         return System.console().readLine("Select an option: ");
     }
+
+    // private static T checkUserInput(String userInput) {
+    //     T number = 0;
+    //     try {
+    //         if (number instanceof int) {
+    //             number = Integer.parseInt(userInput);
+    //         } else if (number instanceof float) {
+    //             number = Float.parseFloat(userInput);
+    //         }
+    //     } catch (NumberFormatException nfe) {
+    //         System.out.println("Option selected is not a number, please try again using a number.");
+    //         return number;
+    //     }
+    //     return number;
+    // }
 
     private static int checkUserInputForInt(String userInput) {
         int option = 0;
